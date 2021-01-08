@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	   <title>My First Webpage</title>
+   	   <meta charset="UTF-8">
+   	   <meta name="description" content="This contains information about web page">
+   	   <meta name="author" content="Angela Chang">
+   	   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+       <script src="../static/javascript/script.js" defer></script>
+       
+   </head>
+
+   <body>
+   		<div class="wrapper">
+   			<div class="left">
+   	            <img class="profile-picture" src="../static/css/picture.jpg" width="200" />
+   	            <h2 id="target">Angela Chang</h2>
+   	            <h3>Finance Student</h3>
+     		</div>
+            <div class="right">
+     		        <div class="introduction">
+   	   			     <p>I'm a finance student study at the University of Waterloo, under the program financial analysis and risk management.</p>
+   	   		  </div>
+
+                  <div class="social-links">   
+   	  			
+                        {% for key, url in links.items() %}
+
+   	  			         <a href={{url}}>{{key}}</a>
+
+                         {% endfor %}
+
+   	 		      </div>
+
+               <form method="post">
+                 <input class="button" type="submit" value="Download Resume" />
+               </form>
+   	 	   </div>
+   		</div>
+   </body>
+</html>
+
